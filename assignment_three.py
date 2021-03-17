@@ -793,21 +793,9 @@ except mysql.connector.Error as err:
         create_table_sour(cursor)
         create_table_stout(cursor)
         create_table_wheat(cursor)
+        view_one()
     else:
         print(err)
-
-try:#Insters the data to the tables 
-    insert_into_brewery(cursor)
-    insert_into_ale(cursor)
-    insert_into_lager(cursor)
-    insert_into_sour(cursor)
-    insert_into_stout(cursor)
-    insert_into_wheat(cursor)
-    view_one()
-
-except Exception as err:
-    print(err)
-    
 
 try:
     while True: # Runs the the progam until the input is q or Q
